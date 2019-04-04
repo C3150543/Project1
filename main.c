@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-lsjvnklsjfbvaf
-'fubfv'd
-
-dbvdufbfd'ba
-df
+asdf
+asdf
+asfd
+adss
+asddaasdf
 return 0;
 }

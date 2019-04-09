@@ -3,13 +3,18 @@
 
 int main() {
      
-    char inputMessage[] = "ATTAcK AT SUNRISE";
+    char inputMessage[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcde";
     int i;
     int key = 1;
     int checkPositive;
     
 
     for(i = 0; i < strlen(inputMessage); i++){
+        
+             if(inputMessage[i] >= 'a' && inputMessage[i] <= 'z')
+        {
+            inputMessage[i] = inputMessage[i] - 32;            
+        }
         
         checkPositive = inputMessage[i] + key - 65;
         
@@ -18,7 +23,10 @@ int main() {
             checkPositive = checkPositive +26;
         }
         
-        if(inputMessage[i] != ' '){
+   
+        
+        if(inputMessage[i] >= 'A' && inputMessage[i] <= 'Z') //Excluding all characters
+        {                                                    //that are not Capitals
             
             inputMessage[i] = (checkPositive % 26 ) + 65;
             }
